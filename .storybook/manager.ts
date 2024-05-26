@@ -1,6 +1,12 @@
-import { addons } from '@storybook/manager-api';
-import yourTheme from './theme';
+import { addons } from '@storybook/manager-api'
+import { create } from '@storybook/theming/create'
 
 addons.setConfig({
-  theme: yourTheme,
-});
+  theme: create({
+    base: 'dark',
+    brandTitle: 'hUIta',
+    brandUrl: 'https://example.com',
+    brandImage: '/huita.svg',
+    brandTarget: '_self'
+  })
+})
